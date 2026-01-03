@@ -2,6 +2,12 @@
 
 This template should help get you started developing with Tauri and React in Vite.  
 
+## commands 
+```bash
+npx sort-package-json
+npx npm-check-updates
+```
+
 ## architecture 
 
 ![](./docs/images/architecture.svg) 
