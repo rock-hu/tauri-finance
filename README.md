@@ -2,6 +2,21 @@
 
 This template should help get you started developing with Tauri and React in Vite.  
 
+
+
+
+|                 |     |                                                      |
+| --------------- | --- | ---------------------------------------------------- |
+| @refinedev/core |     | ![npm](https://img.shields.io/npm/v/@refinedev/core) |
+| @refinedev/antd |     | ![npm](https://img.shields.io/npm/v/@refinedev/antd) |
+| antd            |     | ![npm](https://img.shields.io/npm/v/antd)            |
+| i18next         |     | ![npm](https://img.shields.io/npm/v/i18next)         |
+| react-i18next   |     | ![npm](https://img.shields.io/npm/v/react-i18next)   |
+| @tauri-apps/api |     | ![npm](https://img.shields.io/npm/v/@tauri-apps/api) |
+| @tauri-apps/cli |     | ![npm](https://img.shields.io/npm/v/@tauri-apps/cli) |
+| react           |     | ![npm](https://img.shields.io/npm/v/react)           |
+| react-dom       |     | ![npm](https://img.shields.io/npm/v/react-dom)       |
+
 ## commands 
 ```bash
 npx sort-package-json
