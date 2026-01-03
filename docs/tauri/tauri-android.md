@@ -1,5 +1,11 @@
 # android   
 
+## Android Studio
+- Android SDK Platform
+- Android SDK Platform-Tools
+- NDK (Side by side)
+- Android SDK Build-Tools
+- Android SDK Command-line Tools
 
 ## tauri android init   
 
@@ -21,7 +27,17 @@ victory: Project generated successfully!
     Make cool apps! 🌻 🐕 🎉
 ```
 
+```bash
+rustup target add aarch64-linux-android armv7-linux-androideabi i686-linux-android x86_64-linux-android
+```
+
+## tauri android dev        
+
+```bash
+
+```
+
 ## references   
-| item | link(s)                                |
-| ---- | -------------------------------------- |
-| Prerequisites     | https://tauri.app/start/prerequisites/ |
+| item                    | link(s)                                        |
+| ----------------------- | ---------------------------------------------- |
+| Prerequisites - Android | https://tauri.app/start/prerequisites/#android |

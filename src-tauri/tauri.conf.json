@@ -5,6 +5,7 @@
   "identifier": "com.tauri.finance",
   "build": {
     "beforeDevCommand": "npm run dev",
+    "removeUnusedCommands": true,
     "devUrl": "http://localhost:1420",
     "beforeBuildCommand": "npm run build",
     "frontendDist": "../dist"

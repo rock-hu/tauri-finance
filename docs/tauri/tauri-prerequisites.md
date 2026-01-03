@@ -74,6 +74,8 @@ source "$HOME/.cargo/env.fish"  # For fish
 source $"($nu.home-path)/.cargo/env.nu"  # For nushell
 ```
 
+## linux    
+
 ```bash
 sudo apt update
 sudo apt install libwebkit2gtk-4.1-dev \
