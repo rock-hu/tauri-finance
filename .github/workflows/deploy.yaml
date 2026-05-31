@@ -1,0 +1,47 @@
+name: tauri-finance
+on:
+  # https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows
+  push:
+    branches:
+      - master
+    paths:
+      - .github/workflows/*
+      - package.json
+      - vite.config.ts
+      - vite.config.js
+      - tsconfig.node.json
+      - tsconfig.json
+      - src/**
+      - src-tauri/**
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GITEE_USERNAME: ${{ secrets.GITEE_USERNAME }}
+  GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: git config --global user.email "rock.c.c.hu@gmail.com"
+      - run: git config --global user.name "Rock Hu"
+      - run: git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+      - run: npm install
+      - run: npm run build
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "dist"
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
